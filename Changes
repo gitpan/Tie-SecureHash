@@ -1,0 +1,18 @@
+Revision history for Perl extension Tie::SecureHash.
+
+0.01  Fri Nov  6 10:26:20 1998
+	- original version; created by h2xs 1.18
+
+1.00	Fri Apr  9 11:18:40 1999
+	- first released version
+
+1.01	Wed Apr 14 17:54:56 1999
+
+1.02	Fri May 14 22:51:09 1999
+
+	- Added delete and reassignment operations
+
+	- Added initialization args to Tie::SecureHash::new
+
+
+

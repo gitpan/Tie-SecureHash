@@ -1,0 +1,31 @@
+==============================================================================
+                  Release of version 1.02 of Tie::SecureHash
+==============================================================================
+
+DESCRIPTION
+
+
+
+==============================================================================
+
+CHANGES IN VERSION 1.02
+
+
+	- Added delete and reassignment operations
+
+	- Added initialization args to Tie::SecureHash::new
+
+
+
+
+
+==============================================================================
+
+AVAILABILITY
+
+Tie::SecureHash has been uploaded to the CPAN
+and is also available from:
+
+	http://www.csse.monash.edu.au/~damian/CPAN/Tie-SecureHash.tar.gz
+
+==============================================================================
