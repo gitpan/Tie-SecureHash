@@ -4,7 +4,7 @@ use strict;
 use vars qw($VERSION $strict $fast);
 use Carp;
 
-$VERSION = '1.02';
+$VERSION = '1.03';
 
 sub import
 {
@@ -214,9 +214,17 @@ sub new
 		while (($key,$value) = splice(@_,0,2))
 		{
 			my $fullkey = $key=~/::/ ? $key : "${blessclass}::$key";
-			$impl->{fullkeys}{$fullkey} = $value;
-			push @{$impl->{keylist}{$key}}, $blessclass;
-			$impl->{file}{$fullkey} = $file if $key =~ /\A__/;
+			if ($fast)
+			{
+				$self->{$fullkey} = $value;
+			}
+			else
+			{
+				$impl->{fullkeys}{$fullkey} = $value;
+				push @{$impl->{keylist}{$key}}, $blessclass;
+				$impl->{file}{$fullkey} = $file
+					if $key =~ /\A__/;
+			}
 		}
 	}
 
@@ -621,7 +629,7 @@ Bug reports and other feedback are most welcome.
 
 =head1 COPYRIGHT
 
-        Copyright (c) 1998, Damian Conway. All Rights Reserved.
+        Copyright (c) 1998-2000, Damian Conway. All Rights Reserved.
       This module is free software. It may be used, redistributed
       and/or modified under the terms of the Perl Artistic License
            (see http://www.perl.com/perl/misc/Artistic.html)

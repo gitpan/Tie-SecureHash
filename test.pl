@@ -4,6 +4,7 @@
 
 ######################### We start with some black magic to print on failure.
 
+use 5.005;
 BEGIN { $| = 1; print "1..274\n"; }
 END {print "not ok 1\n" unless $loaded;}
 use Tie::SecureHash;
@@ -386,3 +387,5 @@ package Other;
 ::ok not eval { $::hashref->{__ambiguous} };
 ::ok not eval { $::hashref->{_ambiguous} };
 ::ok not eval { $::hashref->{ambiguous} };
+
+exit(0);

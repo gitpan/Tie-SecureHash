@@ -1,5 +1,5 @@
 ==============================================================================
-                  Release of version 1.02 of Tie::SecureHash
+                  Release of version 1.03 of Tie::SecureHash
 ==============================================================================
 
 DESCRIPTION
@@ -8,15 +8,14 @@ DESCRIPTION
 
 ==============================================================================
 
-CHANGES IN VERSION 1.02
+CHANGES IN VERSION 1.03
 
 
-	- Added delete and reassignment operations
+	- Added set-up for $::VERBOSE to Makefile.PL
 
-	- Added initialization args to Tie::SecureHash::new
+	- worked-around panic at end of test.pl (thanks David)
 
-
-
+	- fixed bug in initialization under fast mode (thanks David)
 
 
 ==============================================================================

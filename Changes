@@ -15,4 +15,10 @@ Revision history for Perl extension Tie::SecureHash.
 	- Added initialization args to Tie::SecureHash::new
 
 
+1.03	Thu Nov 11 14:10:38 1999
 
+	- Added set-up for $::VERBOSE to Makefile.PL
+
+	- worked-around panic at end of test.pl (thanks David)
+
+	- fixed bug in initialization under fast mode (thanks David)
